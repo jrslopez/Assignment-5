@@ -14,4 +14,9 @@ $(document).ready(function () {
     $('.add-col').click(function () {
         $('.col-sm').last().clone().appendTo('.row')
     })
+
+    $('.del-col').click(function () {
+        //$('.col-sm').last().remove()
+        $('div.col-sm:last-child').remove()
+    })
 })
