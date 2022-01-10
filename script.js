@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('.changeAll').click(function () {
         let color = $('#changeAll').val()
         //console.log(color)
-        $('.row').children().each(function (){
+        $('.row').children().each(function () {
             $(this).css('background-color', color)
         })
     })
@@ -41,9 +41,22 @@ $(document).ready(function () {
     })
 
     $('.clear-color').click(function () {
-        $('.row').children().each(function (){
+        $('.row').children().each(function () {
             $(this).css('background-color', 'rgba(0, 0, 0, 0)')
         })
+    })
+
+    let isDown = false
+    $(document).mousedown(function () {
+        isDown = true
+    }).mouseup(function () {
+        isDown = false
+    })
+
+    $('.row').children().hover(function () {
+        if (isDown) {
+            $(this).css('background-color', $('#dragColor').val())
+        }
     })
 
 })
