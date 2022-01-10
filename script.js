@@ -21,9 +21,10 @@ $(document).ready(function () {
     })
 
     $('.changeAll').click(function () {
-        console.log("clicked!")
+        let color = $('#changeAll').val()
+        //console.log(color)
         $('.row').children().each(function (){
-            $(this).css('background-color', 'red')
+            $(this).css('background-color', color)
         })
     })
 
