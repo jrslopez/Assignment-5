@@ -39,4 +39,11 @@ $(document).ready(function () {
             }
         })
     })
+
+    $('.clear-color').click(function () {
+        $('.row').children().each(function (){
+            $(this).css('background-color', 'rgba(0, 0, 0, 0)')
+        })
+    })
+
 })
