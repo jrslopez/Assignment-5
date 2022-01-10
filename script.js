@@ -6,4 +6,8 @@ $(document).ready(function () {
         $('.row').last().clone().appendTo('.container')
     })
 
+    $('.del-row').click(function () {
+        $('.row').last().remove()
+    })
+
 })
