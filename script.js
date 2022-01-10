@@ -28,4 +28,15 @@ $(document).ready(function () {
         })
     })
 
+    $('.changeWhite').click(function () {
+        let color = $('#changeWhite').val()
+        $('.row').children().each(function (){
+            //console.log($(this).css('background-color'))
+            if ($(this).css('background-color') == 'rgba(0, 0, 0, 0)')
+            {
+                //console.log("success")
+                $(this).css('background-color', color)
+            }
+        })
+    })
 })
