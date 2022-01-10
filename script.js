@@ -59,4 +59,7 @@ $(document).ready(function () {
         }
     })
 
+    $('.row').children().click(function () {
+        $(this).css('background-color', $('#clickColor').val())
+    })
 })
