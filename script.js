@@ -13,10 +13,18 @@ $(document).ready(function () {
 
     $('.add-col').click(function () {
         $('.col-sm').last().clone().appendTo('.row')
+        //$('div.col-sm:last-child').clone().appendTo('.row')
     })
 
     $('.del-col').click(function () {
-        //$('.col-sm').last().remove()
         $('div.col-sm:last-child').remove()
     })
+
+    $('.changeAll').click(function () {
+        console.log("clicked!")
+        $('.row').children().each(function (){
+            $(this).css('background-color', 'red')
+        })
+    })
+
 })
